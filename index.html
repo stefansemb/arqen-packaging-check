@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arqen Packaging Check</title>
+<meta name="description" content="See your YouTube title and thumbnail in the feed, on phone and desktop, next to the videos you compete with, and check your title, description, chapters and tags before you publish.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="mark"></span>Arqen Packaging Check</div>
+  <span class="tag">Free · runs in your browser</span>
+</header>
+
+<main class="layout">
+  <section class="panel controls">
+    <h2>Your video</h2>
+    <label>Title <span class="count" id="titleCount"></span>
+      <textarea id="title" rows="2">I Built an AI That Makes My YouTube Videos</textarea></label>
+    <div class="row">
+      <label class="file">Thumbnail<input type="file" id="thumb" accept="image/*"><span id="thumbName">None</span></label>
+    </div>
+    <div class="row">
+      <label class="grow">Channel<input id="channel" value="Your Channel"></label>
+      <label class="small">Length<input id="duration" value="12:34"></label>
+    </div>
+    <label class="file">Channel avatar<input type="file" id="avatar" accept="image/*"><span id="avatarName">None</span></label>
+
+    <h2>Description, chapters and tags</h2>
+    <label>Description <span class="count" id="descCount"></span>
+      <textarea id="description" rows="8">I built an AI that writes, voices and edits my YouTube videos. Here's how it works and what it costs.
+
+0:00 Intro
+0:45 The idea
+3:10 How it works
+7:30 What it costs
+
+#ai #youtube #automation</textarea></label>
+    <label>Tags <span class="count" id="tagCount"></span>
+      <textarea id="tags" rows="3">ai video, youtube automation, faceless channel, ai tools</textarea></label>
+
+    <h2>Compare with (optional)</h2>
+    <p class="hint">Add up to three videos you compete with. Without them, neutral placeholders sit next to yours.</p>
+    <div id="rivals"></div>
+  </section>
+
+  <section class="stage">
+    <div class="bar">
+      <h2 class="inline">How it looks</h2>
+      <span class="spacer"></span>
+      <div class="seg" id="theme"><button type="button" data-v="dark" class="on">Dark</button><button type="button" data-v="light">Light</button></div>
+    </div>
+    <div class="feeds yt" id="feeds"></div>
+
+    <h2>Checklist</h2>
+    <div class="score" id="score"></div>
+    <ul class="checks" id="checks"></ul>
+  </section>
+</main>
+
+<footer class="foot">Made by <a href="https://samidatools.com/">samidatools</a> · Nothing is uploaded: your images stay in this browser. Not affiliated with YouTube.</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
